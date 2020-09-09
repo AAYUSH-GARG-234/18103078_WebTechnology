@@ -1,6 +1,6 @@
 import java.util.*; 
  
-class quest3 
+class question3 
 { 
 	class Edges 
 	{ 
