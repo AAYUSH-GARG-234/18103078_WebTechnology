@@ -1,0 +1,14 @@
+class quest2
+{
+    public static void main(String[] args)
+    {
+        int num = -1;
+        byte b = (byte)num;
+        char c = (char)b;
+        int final_num = c;
+        System.out.println("Initial number: " + num);
+        System.out.println("Number after Convertion to byte: " + b);
+        System.out.println("Byte after converted to Char: " + c);
+        System.out.println("Final number: " + final_num);
+    }
+}
