@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest_3</title>
+</head>
+<body>
+
+    <form>
+        <label>Enter bracket string: </label>
+        <input type="text" id="string" name="string">
+        <input type="submit" value="submit" id="Button" onclick="checkParenthesis()">
+    </form>
+</body>
+<script>
+    function checkParenthesis(){
+    var checkstr = document.getElementById("string").value;
+    let stack = [];
+    var ans=1;
+    for(var i=0;i<checkstr.length;i++){
+        var ch = checkstr[i];
+        if(ch === '[' || ch === '{' || ch === '(') {
+			stack.push(ch);
+        }
+        else if(ch == ']'){
+            if(stack.length == 0 || stack[stack.length-1]!='['){
+                ans = 0;
+                break;
+            }
+            else{
+                stack.pop();
+            }
+        }
+        else if(ch == '}'){
+            if(stack.length == 0 || stack[stack.length-1]!='{'){
+                ans = 0;
+                break;
+            }
+            else{
+                stack.pop();
+            }
+        }
+        else if(ch == ')'){
+            if(stack.length == 0 || stack[stack.length-1]!='('){
+                ans = 0;
+                break;
+            }
+            else{
+                stack.pop();
+            }
+        }
+    }
+    if(stack.length>0 || ans == 0){
+        alert(checkstr + " is Not Valid");
+    }
+    else{
+        alert(checkstr + " is Valid");
+    }
+
+}
+</script>
+</html>
