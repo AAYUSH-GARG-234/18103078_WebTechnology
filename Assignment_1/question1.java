@@ -1,8 +1,19 @@
 import java.util.Scanner;
 public class question1{
+	
+	public static boolean areAllZeroes(int[] arrayA)
+	{
+		for(int i=0;i<26;i++)
+		{
+			if(arrayA[i]!=0)
+				return false;
+		}
+		return true;
+	}
+	
 	public static void main(String[] args) {
 		Scanner input=new Scanner(System.in);
-		System.out.println("Enter the textString in lower case : ");
+		System.out.println("Enter the textString in lowercase : ");
 		String textString=input.next();
 		System.out.println("Enter the substring in lowercase : ");
 		String subString=input.next();
@@ -36,13 +47,5 @@ public class question1{
 		}
 		System.out.println(ans);
 	}
-	public static boolean areAllZeroes(int[] arrayA)
-	{
-		for(int i=0;i<26;i++)
-		{
-			if(arrayA[i]!=0)
-				return false;
-		}
-		return true;
-	}
+	
 }
